@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                <h1 class="display-6 fw-bold">Tasks</h1>
+                <h1 class="display-6 fw-bold">Trabajos</h1>
 
                 <form action="{% url 'create_tasks' %}" method="POST" class="card card-body bg-secondary">
                     {% csrf_token %}
@@ -40,7 +40,6 @@
                 {% for task in tasks %}
                 <div class="card card-body text-black mt-2 d-flex flex-row justify-content-between">
                     <div>
-                        <h2>{{ task.id }}</h2>
                         <h2>{{ task.title }}</h2>
                         <p>{{ task.description }}</p>
                     </div>
